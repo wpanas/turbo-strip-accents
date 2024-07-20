@@ -26,4 +26,8 @@ class MainTest : StringSpec({
                 }
         }
     }
+
+    "should not strip accents for uppercase characters" {
+        turboStripLowercaseAccents("Ś") shouldBe "Ś"
+    }
 })
