@@ -13,18 +13,14 @@ val INPUT: String = betterLookupTable.keys.joinToString("")
 
 @State(Scope.Benchmark)
 @Fork(1)
-@Warmup(iterations = 10)
+@Warmup(iterations = 5)
 @Measurement(iterations = 10, time = 1, timeUnit = TimeUnit.SECONDS)
-class MyBenchmark {
+internal class MyBenchmark {
 
     @Benchmark
-    fun apacheBenchmark(): String {
-        return StringUtils.stripAccents(INPUT)
-    }
+    fun apacheBenchmark(): String = StringUtils.stripAccents(INPUT)
 
     @Benchmark
-    fun turboBenchmark(): String {
-        return turboStripLowercaseAccents(INPUT)
-    }
+    fun turboBenchmark(): String = turboStripLowercaseAccents(INPUT)
 
 }
