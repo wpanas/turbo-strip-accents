@@ -20,6 +20,13 @@ class MainTest : StringSpec({
                 .forEach { input ->
                     val turboStrippedString = turboStripLowercaseAccents(input)
                     val casuallyStrippedString = stripAccents(input)
+
+                    /**
+                     * Thanks to this clue you can add new characters to the lookup table.
+                     * All you have to do is change the filtering and run
+                     * `./gradlew check -i | grep '" to "' | sed -r 's/[^[:space:]]*[0-9][^[:space:]]* ?//g'`
+                     * Then, copy the output of this command and paste it into `betterLookupTable`
+                     */
                     withClue("\"$input\" to \"$casuallyStrippedString\",") {
                         turboStrippedString shouldBe casuallyStrippedString
                     }
