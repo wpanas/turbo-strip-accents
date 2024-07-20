@@ -2,7 +2,7 @@ package com.github.wpanas
 
 import kotlin.streams.asSequence
 
-private val betterLookupTable: Map<String, String> = mapOf(
+internal val betterLookupTable: Map<String, String> = mapOf(
     "à" to "a",
     "á" to "a",
     "â" to "a",

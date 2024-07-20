@@ -12,3 +12,7 @@ turboStripLowercaseAccents("ąćśę") shouldBe "acse"
 
 
 [StringUtils.stripAccents]: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#stripAccents(java.lang.String)
+
+# How fast is it?
+
+Based on benchmarks it's **3 to 4 times faster** than the original.
