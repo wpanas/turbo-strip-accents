@@ -24,7 +24,7 @@ class MainTest : StringSpec({
                     /**
                      * Thanks to this clue you can add new characters to the lookup table.
                      * All you have to do is change the filtering and run
-                     * `./gradlew check -i | grep '" to "' | sed -r 's/[^[:space:]]*[0-9][^[:space:]]* ?//g'`
+                     * `./gradlew check -i | grep '" to "' | sed -r 's/[^[:space:]]*[0-9][^[:space:]]* ?//g' | sort -u`
                      * Then, copy the output of this command and paste it into `betterLookupTable`
                      */
                     withClue("\"$input\" to \"$casuallyStrippedString\",") {
